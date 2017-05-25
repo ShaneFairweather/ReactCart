@@ -5,10 +5,10 @@ import Header from './components/Header'
 import SubHeader from './components/SubHeader'
 import Footer from './components/Footer'
 import ItemList from './components/ItemList'
-import Checkout from './components/Checkout'
+import Cart from './components/Cart'
 import Sidebar from './components/Sidebar'
 import { Row, Col } from 'react-bootstrap'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 class App extends Component {
@@ -20,8 +20,10 @@ class App extends Component {
           <div className="container mainContent">
               <BrowserRouter>
                   <div>
-                      <Route path="/items" component={ItemList} />
-                      <Route path="/checkout" component={Checkout} />
+                      <Switch>
+                          <Route path="/cart" component={Cart} />
+                          <Route path="/" component={ItemList} />
+                      </Switch>
                   </div>
               </BrowserRouter>
           </div>

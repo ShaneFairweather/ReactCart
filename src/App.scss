@@ -121,6 +121,7 @@ html, body {
 
 .item {
   padding: 10px;
+  margin-bottom: 10px;
   &:hover {
     border: 1px solid $subtext;
   }
@@ -140,7 +141,7 @@ html, body {
 .temp {
   height: 200px;
   background-color: blue;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   img {
     height: 100%;
     width: 100%;
@@ -157,6 +158,13 @@ html, body {
   border: none;
 }
 
+
+
+/*============Cart============*/
+
+.cart {
+  margin-top: 40px;
+}
 
 
 /*============Footer============*/
