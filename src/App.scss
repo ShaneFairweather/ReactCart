@@ -1,3 +1,6 @@
+$dark: #333;
+$subtext: #aaa;
+
 html, body {
   height: 100%;
 }
@@ -6,31 +9,239 @@ html, body {
   margin-bottom: 20px;
 }
 
+
+/*============Header=============*/
+//.navbar-brand {
+//  position: absolute;
+//  left: 40%;
+//  right: 50%;
+//  width: 200px;
+//  margin: 0 auto;
+//}
+.nav {
+}
+
+.mainNav {
+  background-color: white;
+  color: #333;
+  height: 70px;
+  margin-bottom: 0;
+  .navbar-nav>li>a, .navbar-brand {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 40px;
+    span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .activeLi {
+      border-bottom: 2px solid black;
+      font-size: 17px;
+    }
+
+  }
+  .navbar-brand {
+    font-size: 29px;
+    //line-height: 30px;
+  }
+  i {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-brand {
+    left: 15px;
+  }
+}
+
+.navbar-center {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  margin: auto;
+  height:100%;
+}
+
+/*========Sub Header========*/
+.subHeader {
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) {
+  .subHeader {
+    ul {
+      margin-left: 40px;
+      li {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.searchButton {
+  position: relative;
+  left: -9px;
+  border-radius: 0;
+}
+
+.navbar .navbar-nav > li > a {
+  .action {
+    color: red;
+  }
+}
+
+.navbar-form .form-control {
+  width: 250px;
+  line-height: 48px;
+  border-radius: 0;
+}
+
+/*===========ItemList=============*/
+
+.itemList {
+  margin-top: 25px;
+}
+
+.sectionHeader {
+  hr {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 0;
+    border-top: 1px solid #000;
+  }
+  h3 span {
+    color: #aaa;
+    font-weight: 100;
+  }
+}
+
+.item {
+  padding: 10px;
+  &:hover {
+    border: 1px solid $subtext;
+  }
+}
+
+.itemType {
+  color: $subtext;
+}
+
+
 /*===========Sidebar=============*/
 .sidebar {
-  height: 600px;
-  background-color: greenyellow;
+  position: relative;
+  top: 40px;
 }
 
 .temp {
   height: 200px;
   background-color: blue;
   margin-bottom: 10px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
+
+.list-group-item {
+  border: none;
+}
+
+.list-group>.list-group>.list-group-item {
+  padding-left: 35px;
+  color: #777;
+  border: none;
+}
+
 
 
 /*============Footer============*/
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #222;
-  text-align: center;
-  margin-top: 20px;
-  p {
-    line-height: 60px;
+
+footer {
+  background-color: #f1f1f1;
+  padding: 6rem 8rem 3rem;
+  h6 {
+    padding-left: 8px;
+    padding-bottom: 10px;
     margin-bottom: 0;
+  }
+  img {
+    text-align: center;
+  }
+}
+
+.footerHeader {
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1.5px;
+}
+
+ul {
+  padding-left: 8px;
+  li {
+    list-style-type: none;
+    padding-bottom: 5px;
+    color: #888888;
+    cursor: pointer;
+    &:hover {
+      color: $dark;
+      transition: .3s;
+    }
+  }
+}
+
+.fa {
+  font-size: 1.4em;
+  margin: 5px;
+  padding: 12px;
+  border-radius: 50%;
+  color: $subtext;
+  &:hover {
+    color: $dark;
+    transition: .3s;
+  }
+  &:first-child {
+    padding-left: 1px;
+  }
+}
+
+.facebook {
+
+}
+
+.socialMediaBar {
+  padding: 0;
+  li {
+    display: inline;
+  }
+}
+
+.paymentBadgeContainer {
+  position: relative;
+  left: 6px;
+  i {
+    font-size: 3em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.storeBadgeContainer {
+  position: relative;
+  top: -30px;
+  left: 7px;
+  .storeBadge {
+    height: 108px;
+    width: 108px;
+    padding: 0;
+  }
+  .google {
+    position: relative;
+    left: -30px;
   }
 }
