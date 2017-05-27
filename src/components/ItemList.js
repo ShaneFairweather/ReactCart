@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import Sidebar from './Sidebar';
+import ItemPanel from './ItemPanel';
+import ItemDetail from './ItemDetail';
 import Shirt from '../assets/img/test.jpg';
-
+import Items from '../reducers/items';
 
 const ItemList = () => {
+    const renderItems = (items) => {
+        return items.map(item =>
+            <ItemPanel item={item} key={item.id}/>
+        )
+    };
+
     return (
         <div className="itemList">
             <Row>
@@ -17,51 +25,7 @@ const ItemList = () => {
                             <h3>Men's Jackets &nbsp; <span>31 Items</span></h3>
                             <hr />
                         </Col>
-                        <Col xs={3}>
-                            <div className="item">
-                                <div className="temp"><img src={Shirt} alt="shirt" /></div>
-                                <div className="priceTag">
-                                    <p>$9.00</p>
-                                    <p>Tiger<span className="itemType"> / Shirt</span></p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={3}>
-                            <div className="item">
-                                <div className="temp"><img src={Shirt} alt="shirt" /></div>
-                                <div className="priceTag">
-                                    <p>$9.00</p>
-                                    <p>Tiger<span className="itemType"> / Shirt</span></p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={3}>
-                            <div className="item">
-                                <div className="temp"><img src={Shirt} alt="shirt" /></div>
-                                <div className="priceTag">
-                                    <p>$9.00</p>
-                                    <p>Tiger<span className="itemType"> / Shirt</span></p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={3}>
-                            <div className="item">
-                                <div className="temp"><img src={Shirt} alt="shirt" /></div>
-                                <div className="priceTag">
-                                    <p>$9.00</p>
-                                    <p>Tiger<span className="itemType"> / Shirt</span></p>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xs={3}>
-                            <div className="item">
-                                <div className="temp"><img src={Shirt} alt="shirt" /></div>
-                                <div className="priceTag">
-                                    <p>$9.00</p>
-                                    <p>Tiger<span className="itemType"> / Shirt</span></p>
-                                </div>
-                            </div>
-                        </Col>
+                        {renderItems(Items)}
                     </Row>
                 </Col>
             </Row>

@@ -41,7 +41,7 @@ html, body {
 
   }
   .navbar-brand {
-    font-size: 29px;
+    font-size: 32px;
     //line-height: 30px;
   }
   i {
@@ -148,6 +148,11 @@ html, body {
   }
 }
 
+.currentCategory {
+  font-weight: 500;
+  color: $dark;
+}
+
 .list-group-item {
   border: none;
 }
@@ -164,6 +169,10 @@ html, body {
 
 .cart {
   margin-top: 40px;
+}
+
+.checkoutButton {
+  box-shadow: inset 0 -3px 0 0 #235581;
 }
 
 

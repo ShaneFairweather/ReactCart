@@ -17,7 +17,7 @@ const Cart = () => {
                 <Col sm={3}>
                     <div className="well">
                         <h5>Subtotal (1 item): $7.50</h5>
-                        <Button bsStyle="primary" bsSize="large" block>Proceed to Checkout</Button>
+                        <Button className="checkoutButton" bsStyle="primary" bsSize="large" block>Proceed to Checkout</Button>
                     </div>
                 </Col>
             </Row>

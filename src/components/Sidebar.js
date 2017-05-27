@@ -6,12 +6,18 @@ const Sidebar = () => {
         <div className="sidebar">
             <ListGroup>
                 <ListGroupItem><strong>Categories</strong></ListGroupItem>
-                <ListGroupItem>Men's Jackets</ListGroupItem>
+                <ListGroupItem>Men's Clothing</ListGroupItem>
                 <ListGroup>
-                    <ListGroupItem>Leather Jackets</ListGroupItem>
-                    <ListGroupItem>Peacoats</ListGroupItem>
-                    <ListGroupItem>Sport Coats</ListGroupItem>
-                    <ListGroupItem>Windbreakers</ListGroupItem>
+                    <ListGroupItem>Jeans</ListGroupItem>
+                    <ListGroupItem><span className="currentCategory">Jackets and Suits</span></ListGroupItem>
+                    <ListGroupItem>Shirts</ListGroupItem>
+                    <ListGroupItem>Hoodies and Sweatshirts</ListGroupItem>
+                    <ListGroupItem>T-shirts and Polos</ListGroupItem>
+                    <ListGroupItem>Underwear</ListGroupItem>
+                    <ListGroupItem>Outerwear</ListGroupItem>
+                    <ListGroupItem>Shorts</ListGroupItem>
+                    <ListGroupItem>Swimming</ListGroupItem>
+                    <ListGroupItem>Thermals</ListGroupItem>
                 </ListGroup>
             </ListGroup>
         </div>

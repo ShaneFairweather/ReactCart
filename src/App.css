@@ -21,7 +21,7 @@ html, body {
       border-bottom: 2px solid black;
       font-size: 17px; }
   .mainNav .navbar-brand {
-    font-size: 29px; }
+    font-size: 32px; }
   .mainNav i {
     font-size: 20px; }
 
@@ -95,6 +95,10 @@ html, body {
     height: 100%;
     width: 100%; }
 
+.currentCategory {
+  font-weight: 500;
+  color: #333; }
+
 .list-group-item {
   border: none; }
 
@@ -106,6 +110,9 @@ html, body {
 /*============Cart============*/
 .cart {
   margin-top: 40px; }
+
+.checkoutButton {
+  box-shadow: inset 0 -3px 0 0 #235581; }
 
 /*============Footer============*/
 footer {

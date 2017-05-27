@@ -6,7 +6,7 @@ const Header = () => {
         <Navbar collapseOnSelect className="mainNav">
             <Navbar.Header>
                 <Navbar.Brand className="navbar-center navbar-brand">
-                    <a className="navbar-brand" href="#">React Cart</a>
+                    <a className="navbar-brand" href="#"><em>react</em><strong>Cart</strong></a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

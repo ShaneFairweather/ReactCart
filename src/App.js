@@ -5,6 +5,7 @@ import Header from './components/Header'
 import SubHeader from './components/SubHeader'
 import Footer from './components/Footer'
 import ItemList from './components/ItemList'
+import ItemDetail from './components/ItemDetail'
 import Cart from './components/Cart'
 import Sidebar from './components/Sidebar'
 import { Row, Col } from 'react-bootstrap'
@@ -22,6 +23,7 @@ class App extends Component {
                   <div>
                       <Switch>
                           <Route path="/cart" component={Cart} />
+                          <Route path="/itemdetail" component={ItemDetail} />
                           <Route path="/" component={ItemList} />
                       </Switch>
                   </div>
