@@ -2,7 +2,8 @@ html, body {
   height: 100%; }
 
 .mainContent {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  width: 1270px; }
 
 /*============Header=============*/
 .mainNav {
@@ -17,7 +18,7 @@ html, body {
     .mainNav .navbar-nav > li > a span, .mainNav .navbar-brand span {
       font-size: 13px;
       font-weight: 500; }
-    .mainNav .navbar-nav > li > a .activeLi, .mainNav .navbar-brand .activeLi {
+    .mainNav .navbar-nav > li > a .activeLink, .mainNav .navbar-brand .activeLink {
       border-bottom: 2px solid black;
       font-size: 17px; }
   .mainNav .navbar-brand {
@@ -64,20 +65,36 @@ html, body {
 .itemList {
   margin-top: 25px; }
 
-.sectionHeader hr {
+.itemList hr {
   margin-top: 15px;
   margin-bottom: 30px;
   border: 0;
   border-top: 1px solid #000; }
-.sectionHeader h3 span {
+.itemList h3 span {
   color: #aaa;
   font-weight: 100; }
 
 .item {
-  padding: 10px;
   margin-bottom: 10px; }
+  .item .itemContent {
+    padding: 10px; }
+  .item .addToCartButton {
+    display: none;
+    background-color: #eee;
+    color: #777;
+    border: 1px solid #eee;
+    border-radius: 0;
+    height: 40px;
+    font-size: 1.1em; }
+    .item .addToCartButton .glyphicon {
+      font-size: 14px;
+      margin-right: 3px;
+      left: -1px; }
   .item:hover {
-    border: 1px solid #aaa; }
+    border: 1px solid #b5b5b5;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24); }
+  .item:hover .addToCartButton {
+    display: inline; }
 
 .itemType {
   color: #aaa; }
@@ -104,15 +121,34 @@ html, body {
 
 .list-group > .list-group > .list-group-item {
   padding-left: 35px;
+  padding-top: 0;
   color: #777;
   border: none; }
+  .list-group > .list-group > .list-group-item:last-child {
+    padding-bottom: 0; }
+
+.quantity {
+  color: #bbb;
+  font-size: 11px; }
+
+.accessories {
+  padding-top: 0; }
 
 /*============Cart============*/
 .cart {
   margin-top: 40px; }
 
+.well {
+  margin-top: 20px; }
+
 .checkoutButton {
   box-shadow: inset 0 -3px 0 0 #235581; }
+
+.cartItem {
+  padding: 10px; }
+
+.cartItemImage {
+  height: 100px; }
 
 /*============Footer============*/
 footer {

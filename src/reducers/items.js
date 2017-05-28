@@ -1,53 +1,76 @@
-import Shirt from '../assets/img/test.jpg';
+import Shirt1 from '../assets/img/shirt1.jpg';
+import Shirt2 from '../assets/img/shirt2.jpg';
+import Shirt3 from '../assets/img/shirt3.jpg';
+import Shirt4 from '../assets/img/shirt4.jpg';
+import Shirt5 from '../assets/img/shirt5.jpg';
+import Shirt6 from '../assets/img/shirt6.jpg';
+import Shirt7 from '../assets/img/shirt7.jpg';
+import Shirt8 from '../assets/img/shirt8.jpg';
 
 const items = [
     {
         type: 'Shirt',
-        name: 'TG Flyer',
+        name: 'Plain T',
         brand: 'TG Flyer',
-        img: Shirt,
+        img: Shirt1,
         price: 7.99,
         id: 1
     },
     {
         type: 'Shirt',
-        name: 'Classic',
+        name: 'Button V',
         brand: 'Classic',
-        img: Shirt,
+        img: Shirt2,
         price: 7.99,
         id: 2
     },
     {
         type: 'Shirt',
-        name: 'Dark',
+        name: 'Athletic',
         brand: 'Dark',
-        img: Shirt,
+        img: Shirt3,
         price: 7.99,
         id: 3
     },
     {
         type: 'Shirt',
-        name: 'New Era',
+        name: 'Classic Dark',
         brand: 'Dark',
-        img: Shirt,
+        img: Shirt4,
         price: 7.99,
         id: 4
     },
     {
         type: 'Shirt',
-        name: 'Night Out',
+        name: 'Black T',
         brand: 'Dark',
-        img: Shirt,
+        img: Shirt5,
         price: 7.99,
         id: 5
     },
     {
         type: 'Shirt',
-        name: 'TP DR',
+        name: 'V-Neck',
         brand: 'Dark',
-        img: Shirt,
+        img: Shirt6,
         price: 7.99,
         id: 6
+    },
+    {
+        type: 'Shirt',
+        name: 'Striped V',
+        brand: 'Dark',
+        img: Shirt7,
+        price: 7.99,
+        id: 7
+    },
+    {
+        type: 'Shirt',
+        name: 'Long Henley',
+        brand: 'Dark',
+        img: Shirt8,
+        price: 7.99,
+        id: 8
     }
 ];
 

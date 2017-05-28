@@ -1,17 +1,27 @@
 import React from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Col, Button, Glyphicon } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
-const ItemPanel = ({item}) => {
+const ItemPanel = (props) => {
+    // const fixIt = (thing) => {
+    //     props.addToCart(thing)
+    // }
+
     return (
-        <Col xs={3}>
+        <Col xs={3} className="itemPanel">
             <div className="item">
-                <div className="temp"><Link to="/itemdetail"><img src={item.img} alt="shirt" /></Link></div>
-                <div className="priceTag">
-                    <p>${item.price}</p>
-                    <p>{item.name}<span className="itemType"> / {item.type}</span></p>
+                <div className="itemContent">
+                    <div className="temp"><Link to="/cart"><img src={props.item.img} alt="shirt" /></Link></div>
+                    <div className="priceTag">
+                        <p>${props.item.price}</p>
+                        <p>{props.item.name}<span className="itemType"> / {props.item.type}</span></p>
+                    </div>
                 </div>
-                <Button className="addToCartButton" bsStyle="primary" bsSize="small" block>Add to Cart</Button>
+                <Button className="addToCartButton"
+                        bsStyle="primary"
+                        bsSize="small"
+                        onClick={() => props.addToCart(props.item)}
+                        block><Glyphicon glyph="shopping-cart" />Add to Cart</Button>
             </div>
         </Col>
     );

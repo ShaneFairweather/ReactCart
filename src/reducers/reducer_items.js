@@ -1,12 +1,18 @@
 import { ADD_ITEM, REMOVE_ITEM } from '../actions/actions_types';
 
-export default function(state = {}, action) {
+const initialUserState = {
+    items:[]
+}
+
+export default function(state = initialUserState, action) {
     switch (action.type) {
-        case ADD_ITEM:
-            console.log(action.payload.data);
-        case REMOVE_ITEM:
-            console.log(action.payload.data);
-        default:
-            return state;
+        // case ADD_ITEM:
+        //     return action.payload;
+        case ADD_ITEM :
+            return {
+                ...state,
+                items: [...state.items, action.payload]
+            }
     }
+    return state;
 }

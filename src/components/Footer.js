@@ -2,11 +2,6 @@ import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import appstore from '../assets/img/app-store-badge.png';
 import googleplay from '../assets/img/google-play-badge-128x128.png';
-import mastercard from '../assets/img/Master-Card-icon.png';
-import visa from '../assets/img/Visa-icon.png';
-import paypal from '../assets/img/Paypal-icon.png';
-
-
 
 const Footer = () => {
     return (
@@ -63,4 +58,4 @@ const Footer = () => {
 
 export default Footer;
 
-                {/*<p className="text-muted">&copy; 2017 Shane Fairweather</p>*/}
+                /*<p className="text-muted">&copy; 2017 Shane Fairweather</p>*/
