@@ -33,6 +33,7 @@ class ItemList extends Component {
                                 <h3>Mens' T-Shirts &nbsp; <span>8 Items</span></h3>
                                 <hr />
                             </Col>
+                            {console.log(this.props.cart)}
                             {this.renderItems(Items)}
                             &nbsp;
                             <hr />
@@ -50,7 +51,7 @@ class ItemList extends Component {
 
 function mapStateToProps(state) {
     return {
-        cart: state.items
+        cart: state.items.items
     };
 }
 

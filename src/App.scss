@@ -154,6 +154,15 @@ html, body {
   color: $subtext;
 }
 
+.priceTag {
+  padding-top: 15px;
+}
+
+.itemPanel {
+  height: 250px;
+  margin-bottom: 93px;
+}
+
 
 /*===========Sidebar=============*/
 .sidebar {
@@ -204,10 +213,17 @@ html, body {
 
 .cart {
   margin-top: 40px;
+  margin-bottom: 30px;
+  .col-sm-9 {
+    padding-right: 50px;
+    >hr {
+      border-top: 1px solid #000;
+    }
+  }
 }
 
 .well {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .checkoutButton {
@@ -215,12 +231,33 @@ html, body {
 }
 
 .cartItem {
-  padding: 10px;
+  padding: 10px 10px 20px 20px;
+  border-bottom: 1px solid #eee;
+  .cartDeleteButton {
+    border: 1px solid #777;
+    color: #777;
+    position: relative;
+    margin: 0 20px 10px;
+    text-align: right;
+    &:hover {
+      border: 1px solid black;
+      color: black;
+      background-color: white;
+      transition: all .4s;
+    }
+  }
 }
 
 .cartItemImage {
   height: 100px;
 }
+
+.pull-right {
+  height: 100%;
+  text-align: right;
+}
+
+
 
 /*============Footer============*/
 

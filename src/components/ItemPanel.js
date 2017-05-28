@@ -11,7 +11,7 @@ const ItemPanel = (props) => {
         <Col xs={3} className="itemPanel">
             <div className="item">
                 <div className="itemContent">
-                    <div className="temp"><Link to="/cart"><img src={props.item.img} alt="shirt" /></Link></div>
+                    <div className="temp"><img src={props.item.img} alt="shirt" /></div>
                     <div className="priceTag">
                         <p>${props.item.price}</p>
                         <p>{props.item.name}<span className="itemType"> / {props.item.type}</span></p>

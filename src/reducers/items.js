@@ -21,7 +21,7 @@ const items = [
         name: 'Button V',
         brand: 'Classic',
         img: Shirt2,
-        price: 7.99,
+        price: 9.99,
         id: 2
     },
     {
@@ -29,7 +29,7 @@ const items = [
         name: 'Athletic',
         brand: 'Dark',
         img: Shirt3,
-        price: 7.99,
+        price: 8.99,
         id: 3
     },
     {
@@ -45,7 +45,7 @@ const items = [
         name: 'Black T',
         brand: 'Dark',
         img: Shirt5,
-        price: 7.99,
+        price: 8.99,
         id: 5
     },
     {
@@ -53,7 +53,7 @@ const items = [
         name: 'V-Neck',
         brand: 'Dark',
         img: Shirt6,
-        price: 7.99,
+        price: 13.99,
         id: 6
     },
     {
@@ -61,7 +61,7 @@ const items = [
         name: 'Striped V',
         brand: 'Dark',
         img: Shirt7,
-        price: 7.99,
+        price: 12.99,
         id: 7
     },
     {
@@ -69,7 +69,7 @@ const items = [
         name: 'Long Henley',
         brand: 'Dark',
         img: Shirt8,
-        price: 7.99,
+        price: 10.99,
         id: 8
     }
 ];

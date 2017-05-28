@@ -3,15 +3,16 @@ import { Row, Col, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { addToCart } from '../actions/actions_index';
+import { removeFromCart } from '../actions/actions_index';
 
 import CartItem from './CartItem';
 
 class Cart extends Component {
-
     renderCart(items) {
         return items.map(item =>
-            <CartItem item={item}
-                        key={item.id}/>
+            <CartItem   item={item}
+                        key={item.id}
+                        removeFromCart={item => this.props.removeFromCart(item)}/>
         )
     }
 
@@ -19,7 +20,7 @@ class Cart extends Component {
     render() {
         let price = 0;
 
-        if (this.props.cart.items.length == 0) {
+        if (this.props.cart.length == 0) {
             return (
                 <div className="cart">
                     <Row>
@@ -51,14 +52,16 @@ class Cart extends Component {
                         <hr />
                         <Row>
                             <Col xs={12}>
-                                {console.log(this.props.cart)}
-                                {this.renderCart(this.props.cart.items)}
+                                {this.renderCart(this.props.cart)}
                             </Col>
                         </Row>
                     </Col>
                     <Col sm={3}>
                         <div className="well">
-                            <h5>Subtotal ({this.props.cart.items.length} item(s)): {price}</h5>
+                            <h5>Subtotal ({this.props.cart.length} item(s)): ${this.props.cart.reduce(function(previous, price) {
+                                previous+=price.price;
+                                return previous;
+                            }, 0)}</h5>
                             <Button className="checkoutButton" bsStyle="primary" bsSize="large" block>Proceed to Checkout</Button>
                         </div>
                     </Col>
@@ -71,15 +74,13 @@ class Cart extends Component {
 
 // export default Cart;
 function mapStateToProps(state) {
-    console.log(state.items.items)
-    // console.log(state.cart)
     return {
-        cart: state.items
+        cart: state.items.items
     };
 }
 
 function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ addToCart: addToCart }, dispatch)
+    return bindActionCreators({ removeFromCart: removeFromCart }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);

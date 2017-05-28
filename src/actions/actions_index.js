@@ -7,7 +7,9 @@ export function addToCart(item) {
     }
 }
 
-//
-// export function removeFromCart() {
-//     console.log('nothing');
-// }
+export function removeFromCart(item) {
+    return {
+        type: REMOVE_ITEM,
+        payload: item
+    }
+}

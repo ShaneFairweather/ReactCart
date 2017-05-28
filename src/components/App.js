@@ -17,15 +17,11 @@ let arr = [];
 
 class App extends Component {
   render() {
-      arr.push(this.props.cart)
-      let arrLength = arr.length || 0
-      // console.log("Cart:" + arr)
-      // console.log(arrLength)
     return (
       <div className="App">
           <BrowserRouter>
               <div>
-                  <Header itemCount={this.props.cart.items.length}/>
+                  <Header itemCount={this.props.cart.length}/>
                   <SubHeader/>
                   <div className="container mainContent">
                       <Switch>
@@ -42,10 +38,9 @@ class App extends Component {
   }
 }
 
-// export default App;
 function mapStateToProps(state) {
     return {
-        cart: state.items
+        cart: state.items.items
     };
 }
 
