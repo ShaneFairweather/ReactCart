@@ -24,7 +24,7 @@ const CartItem = (props) => {
                     >Remove</Button>
                 </Col>
                 <Col xs={2} className="pull-right">
-                    <p>{props.item.price}</p>
+                    <p>${props.item.price}</p>
                 </Col>
 
             </Row>

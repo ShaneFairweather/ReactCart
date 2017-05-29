@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
+import { addToCart } from '../actions/actions_index';
 import { removeFromCart } from '../actions/actions_index';
 
 import CartItem from './CartItem';
@@ -60,8 +61,8 @@ class Cart extends Component {
                     <Col sm={3}>
                         <div className="well">
                             <h5>Subtotal ({this.props.cart.length} item(s)): ${this.props.cart.reduce(function(previous, price) {
-                                return previous+=price.price;
-                            }, 0)}</h5>
+                                return (previous+=price.price);
+                            }, 0).toString().substr(0, 5)}</h5>
                             <Button className="checkoutButton" bsStyle="primary" bsSize="large" block>Proceed to Checkout</Button>
                         </div>
                     </Col>
