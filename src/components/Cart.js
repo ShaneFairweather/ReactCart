@@ -18,6 +18,13 @@ class Cart extends Component {
         )
     }
 
+    cutPriceLength = (arr) => {
+        let test = arr.reduce(function(previous, price) {
+            return (previous+=price.price);
+        }, 0).toString()
+        let decimalIndex = test.indexOf('.');
+        return test.substr(0, decimalIndex + 3)
+    }
 
     render() {
         let price = 0;
@@ -60,9 +67,7 @@ class Cart extends Component {
                     </Col>
                     <Col sm={3}>
                         <div className="well">
-                            <h5>Subtotal ({this.props.cart.length} item(s)): ${this.props.cart.reduce(function(previous, price) {
-                                return (previous+=price.price);
-                            }, 0).toString().substr(0, 5)}</h5>
+                            <h5>Subtotal ({this.props.cart.length} item(s)): ${this.cutPriceLength(this.props.cart)}</h5>
                             <Button className="checkoutButton" bsStyle="primary" bsSize="large" block>Proceed to Checkout</Button>
                         </div>
                     </Col>

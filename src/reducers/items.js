@@ -13,7 +13,7 @@ const items = [
         name: 'Plain T',
         brand: 'TG Flyer',
         img: Shirt1,
-        price: 7.99,
+        price: 8.99,
         id: 1
     },
     {
