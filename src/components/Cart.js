@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { addToCart } from '../actions/actions_index';
 import { removeFromCart } from '../actions/actions_index';
 
 import CartItem from './CartItem';
@@ -11,6 +9,9 @@ class Cart extends Component {
     renderCart(items) {
         return items.map(item =>
             <CartItem   item={item}
+                        quantity={this.props.cart.reduce(function(initial, itemInstance) {
+                            return initial+=(itemInstance === item)
+                        }, 0)}
                         key={item.id}
                         removeFromCart={item => this.props.removeFromCart(item)}/>
         )
@@ -59,8 +60,7 @@ class Cart extends Component {
                     <Col sm={3}>
                         <div className="well">
                             <h5>Subtotal ({this.props.cart.length} item(s)): ${this.props.cart.reduce(function(previous, price) {
-                                previous+=price.price;
-                                return previous;
+                                return previous+=price.price;
                             }, 0)}</h5>
                             <Button className="checkoutButton" bsStyle="primary" bsSize="large" block>Proceed to Checkout</Button>
                         </div>
@@ -72,15 +72,11 @@ class Cart extends Component {
     };
 };
 
-// export default Cart;
 function mapStateToProps(state) {
     return {
-        cart: state.items.items
+        cart: state.items.data
     };
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ removeFromCart: removeFromCart }, dispatch)
-}
+export default connect(mapStateToProps, { removeFromCart })(Cart);
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cart);

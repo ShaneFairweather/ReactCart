@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
 import '../App.css'
 import Header from './Header'
 import SubHeader from './SubHeader'
@@ -8,12 +7,9 @@ import ItemList from './ItemList'
 import ItemDetail from './ItemDetail'
 import Cart from './Cart'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { createStore } from 'redux';
 import { addToCart } from '../actions/actions_index';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
-let arr = [];
 
 class App extends Component {
   render() {
@@ -40,12 +36,9 @@ class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        cart: state.items.items
+        cart: state.items.data
     };
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ addToCart: addToCart }, dispatch)
-}
+export default connect(mapStateToProps, { addToCart })(App);
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);

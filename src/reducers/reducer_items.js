@@ -1,7 +1,7 @@
 import { ADD_ITEM, REMOVE_ITEM } from '../actions/actions_types';
 
 const initialUserState = {
-    items:[]
+    data:[]
 }
 
 export default function(state = initialUserState, action) {
@@ -9,12 +9,12 @@ export default function(state = initialUserState, action) {
         case ADD_ITEM:
             return {
                 ...state,
-                items: [...state.items, action.payload]
+                data: [...state.data, action.payload]
             }
         case REMOVE_ITEM:
             return {
-                items: [...state.items.slice(0, state.items.indexOf(action.payload)),
-                ...state.items.slice(state.items.indexOf(action.payload) + 1)]
+                data: [...state.data.slice(0, state.data.indexOf(action.payload)),
+                ...state.data.slice(state.data.indexOf(action.payload) + 1)]
             }
     }
     return state;

@@ -11,7 +11,10 @@ const CartItem = (props) => {
                 </Col>
                 <Col xs={2}>
                     <p>{props.item.name}</p>
-                    <p>{props.item.type}</p>
+                    <p><span className="itemType">{props.item.type}</span></p>
+                </Col>
+                <Col xs={2}>
+                    <p>{props.quantity}</p>
                 </Col>
                 <Col xs={2} className="pull-right">
                     <Button className="cartDeleteButton"

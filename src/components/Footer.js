@@ -50,6 +50,8 @@ const Footer = () => {
                         <Col xs={3} md={6}><img className="storeBadge apple" src={appstore} alt="appstore"/></Col>
                         <Col xs={3} md={6}><img className="storeBadge google" src={googleplay} alt="googleplay"/></Col>
                     </Row>
+                    <div>Disclaimer: This site was intended as a concept website to demonstrate React + Redux cart functionality. This website is not selling any actual products, and likeness to other websites is unintentional. <br/>
+                        Coded by <a href="http://shanefairweather.com">Shane Fairweather</a></div>
                 </Col>
             </Row>
         </footer>

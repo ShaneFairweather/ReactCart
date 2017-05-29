@@ -1,11 +1,7 @@
 import React from 'react';
 import { Col, Button, Glyphicon } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
 
 const ItemPanel = (props) => {
-    // const fixIt = (thing) => {
-    //     props.addToCart(thing)
-    // }
 
     return (
         <Col xs={3} className="itemPanel">
